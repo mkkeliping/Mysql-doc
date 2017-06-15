@@ -6,4 +6,178 @@ MySQL是一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，
 图品
 ## MySQL安装
 >
->>
+>> 1. vim  .vimrc     //进入一种编辑状态，可以进行粘贴                                                                                      sudo vim /etc/apt/sources.list
+vim .vimrc
+linux@ubuntu:~$ sudo vim /etc/apt/sources.list
+linux@ubuntu:~$ sudo apt-get update
+
+ sudo apt-get install tasksel
+ Reading package lists... Done
+Building dependency tree  
+
+
+mysql -u root -p 
+Enter password: 
+
+
+
+
+
+
+
+
+
+
+ databases
+    -> ^C  bases
+
+^C
+mysql> show databases
+    -> ;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+4 rows in set (0.09 sec)
+
+mysql> create database STU
+    -> create database STU;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'create database STU' at line 2
+mysql> create database STU create database STU;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'create database STU' at line 1
+mysql> create database STU;
+Query OK, 1 row affected (0.16 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| STU                |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.05 sec)
+
+mysql> drop database STU;
+Query OK, 0 rows affected (0.32 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+4 rows in set (0.00 sec)
+
+mysql> 
+mysql> create database STU;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| STU                |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.00 sec)
+
+mysql> use STU
+Database changed
+mysql> select database();
++------------+
+| database() |
++------------+
+| STU        |
++------------+
+1 row in set (0.00 sec)
+
+mysql> select now();
++---------------------+
+| now()               |
++---------------------+
+| 2017-06-15 02:08:07 |
++---------------------+
+1 row in set (0.01 sec)
+
+mysql> create table information;
+ERROR 1113 (42000): A table must have at least 1 column
+mysql> create table information
+    -> 
+    -> 
+    -> (ID int(4) not null primary key auto_increment,
+    -> Name VARCHAR(20) not nul;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'nul' at line 5
+mysql> create table information   (ID int(4) not null primary key auto_increment, Name VARCHAR(20) not nul,
+    -> 
+    -> Sex VARCHAR(4),
+    -> Sex VARCHAR(4) not null,
+    -> Sdept VARCHAR(40))
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'nul,
+
+Sex VARCHAR(4),
+Sex VARCHAR(4) not null,
+Sdept VARCHAR(40))' at line 1
+mysql> desc information;
+ERROR 1146 (42S02): Table 'STU.information' doesn't exist
+mysql> create table information   (ID int(4) not null primary key auto_increment, Name VARCHAR(20) not null,  Sex VARCHAR(4), Sex VARCHAR(4) not null, Sdept VARCHAR(40));
+ERROR 1060 (42S21): Duplicate column name 'Sex'
+mysql> create table information   (ID int(4) not null primary key auto_increment, Name VARCHAR(20) not null,  Sex VARCHAR(4), Sex VARCHAR(4) not null, Sdept int(4));
+ERROR 1060 (42S21): Duplicate column name 'Sex'
+mysql> create table information   (ID int(4) not null primary key auto_increment, Name VARCHAR(20) not null,  Sex VARCHAR(4), Sex VARCHAR(4) not null, Sdept int(4),);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+mysql> create table information   (ID int(4) not null primary key auto_increment, Name VARCHAR(20) not null,  Sex VARCHAR(4), Sex VARCHAR(4) not null, Sdept int(4),);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+mysql> create table information   (ID int(4) not null primary key auto_increment, Name VARCHAR(20) not null,  Sex VARCHAR(4), Sex VARCHAR(4) not null, Sdept int(4),FOREIGN KEY (Sdept)REFERENCES School(Sdept));
+ERROR 1060 (42S21): Duplicate column name 'Sex'
+mysql> (ID int(4) not null primary key auto_increment, Name VARCHAR(20) not null,  Sex VARCHAR(4), Sex VARCHAR(4) not null, Sdept int(4),FOREIGN KEY (Sdept)REFERENCES School(Sdept));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ID int(4) not null primary key auto_increment, Name VARCHAR(20) not null,  Sex V' at line 1
+mysql> create table information   (ID int(4) not null primary key auto_increment, Name VARCHAR(20) not null, Sex VARCHAR(4) not null, Sdept int(4),FOREIGN KEY (Sdept)REFERENCES School(Sdept))
+    -> ;
+ERROR 1215 (HY000): Cannot add foreign key constraint
+mysql> create table School (Sdept int(8) not null primary key, Sname VARCHAR(40) not null);
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> create table information   (ID int(4) not null primary key auto_increment, Name VARCHAR(20) not null, Sex VARCHAR(4) not null, Sdept int(4),FOREIGN KEY (Sdept)REFERENCES School(Sdept))
+    -> ;
+Query OK, 0 rows affected (0.08 sec)
+
+mysql> desc information
+    -> ;
++-------+-------------+------+-----+---------+----------------+
+| Field | Type        | Null | Key | Default | Extra          |
++-------+-------------+------+-----+---------+----------------+
+| ID    | int(4)      | NO   | PRI | NULL    | auto_increment |
+| Name  | varchar(20) | NO   |     | NULL    |                |
+| Sex   | varchar(4)  | NO   |     | NULL    |                |
+| Sdept | int(4)      | YES  | MUL | NULL    |                |
++-------+-------------+------+-----+---------+----------------+
+4 rows in set (0.07 sec)
+
+mysql> desc School
+    -> ;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| Sdept | int(8)      | NO   | PRI | NULL    |       |
+| Sname | varchar(40) | NO   |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> 
+
+
+
