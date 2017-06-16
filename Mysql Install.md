@@ -6,8 +6,7 @@ MySQL是一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，
 图品
 ## MySQL安装
 > MySQL安装
->>      
-      1. vim  .vimr     
+>> 1. vim  .vimr     
         解释：如果没有找到vimrc或gvimrc，它缺省工作VI兼容的模式，这意味着，你只能使用VI所具备的功能，而vim中的大量扩展功能将无法使用。也许这就是          你的vim如此难用的原因。                                                                                                
          在Linux安装数据库时，进行.vimrc配置：先进入.vimrc然后把原来的删除，然后按I进入编辑状态，粘贴下文，配置环境。    
          *deb http://mirrors.aliyun.com/ubuntu/ xenial main restricted universe multiverse
