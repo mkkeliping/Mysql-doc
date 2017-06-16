@@ -35,7 +35,7 @@ MySQL是一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，
        解释：连接本地数据库注意输入上述命令后回车出现Enter password:然后在输入密码            
        连接远程主机MySQL需要输入mysql -h110.110.110.110 -u root -p 123;其中前面是主机，本主机可以省去。      
        
- >> MySQL 其他设置命令       
+ > MySQL 其他设置命令       
  1. 退出MYSQL命令： exit （回车）
  1. 退出MYSQL命令： exit （回车）         
  2. 修改密码：mysqladmin -u用户名 -p旧密码 password 新密码
