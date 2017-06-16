@@ -5,8 +5,9 @@ MySQL是一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，
 
 图品
 ## MySQL安装
-> 1. vim  .vimr
->>    解释：如果没有找到vimrc或gvimrc，它缺省工作VI兼容的模式，这意味着，你只能使用VI所具备的功能，而vim中的大量扩展功能将无法使用。也许这就是你       的vim如此难用的原因。                                                                                                
+> MySQL安装
+>> 1. vim  .vimr     
+      解释：如果没有找到vimrc或gvimrc，它缺省工作VI兼容的模式，这意味着，你只能使用VI所具备的功能，而vim中的大量扩展功能将无法使用。也许这就是你       的vim如此难用的原因。                                                                                                
       在Linux安装数据库时，进行.vimrc配置：先进入.vimrc然后把原来的删除，然后按I进入编辑状态，粘贴下文，配置环境。    
       *deb http://mirrors.aliyun.com/ubuntu/ xenial main restricted universe multiverse
       deb http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted universe multiverse
@@ -23,9 +24,17 @@ MySQL是一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，
         deb-src http://mirrors.aliyun.com/ubuntu/ xenial-proposed main restricted universe multiverse       
        `# Canonical 合作伙伴和附加`   
       deb http://archive.canonical.com/ubuntu/ xenial partner
-      deb http://extras.ubuntu.com/ubuntu/ xenial main*     
-      2. sudo vim /etc/apt/sources.list      
-     解释 ：
+      deb http://extras.ubuntu.com/ubuntu/ xenial main*           
+      
+    2. sudo vim /etc/apt/sources.list     
+        解释 ：打开源列表        
+    3. ~$ sudo apt-get update    
+        解释：更新源      
+    4. sudo apt-get install tasksel        
+        解释：安装       
+    5. mysql -u root -p 
+        解释：连接本地数据库注意输入上述命令后回车在输入密码           
+             连接远程主机MySQL需要输入mysql -h110.110.110.110 -u root -p 123;其中前面是主机，本主机可以省去。
 linux@ubuntu:~$ sudo vim /etc/apt/sources.list
 linux@ubuntu:~$ sudo apt-get update
 
