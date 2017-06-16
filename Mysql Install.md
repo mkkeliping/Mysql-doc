@@ -10,22 +10,30 @@ MySQL是一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，
       解释：如果没有找到vimrc或gvimrc，它缺省工作VI兼容的模式，这意味着，你只能使用VI所具备的功能，而vim中的大量扩展功能将无法使用。也许这就是你       的vim如此难用的原因。                                                                                                
       在Linux安装数据库时，进行.vimrc配置：先进入.vimrc然后把原来的删除，然后按I进入编辑状态，粘贴下文，配置环境。    
      
-*deb http://mirrors.aliyun.com/ubuntu/ xenial main restricted universe multiverse
-deb http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted universe multiverse
-deb http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted universe multiverse
-deb http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse
-`##测试版源`
-deb http://mirrors.aliyun.com/ubuntu/ xenial-proposed main restricted universe multiverse
-`# 源码`
-deb-src http://mirrors.aliyun.com/ubuntu/ xenial main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse
-`##测试版源`
-deb-src http://mirrors.aliyun.com/ubuntu/ xenial-proposed main restricted universe multiverse
-`# Canonical 合作伙伴和附加`
-deb http://archive.canonical.com/ubuntu/ xenial partner
-deb http://extras.ubuntu.com/ubuntu/ xenial main*
+      *deb http://mirrors.aliyun.com/ubuntu/ xenial main restricted universe multiverse
+      deb http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted universe multiverse
+      deb http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted universe multiverse
+      deb http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse          
+      
+      `##测试版源`
+      
+      deb http://mirrors.aliyun.com/ubuntu/ xenial-proposed main restricted universe multiverse        
+      
+      `# 源码`
+      
+      deb-src http://mirrors.aliyun.com/ubuntu/ xenial main restricted universe multiverse
+      deb-src http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted universe multiverse
+      deb-src http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted universe multiverse
+      deb-src http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse       
+      
+      `##测试版源`
+      
+      deb-src http://mirrors.aliyun.com/ubuntu/ xenial-proposed main restricted universe multiverse       
+      
+      `# Canonical 合作伙伴和附加`
+      
+      deb http://archive.canonical.com/ubuntu/ xenial partner
+      deb http://extras.ubuntu.com/ubuntu/ xenial main*
 
       sudo vim /etc/apt/sources.list
 vim .vimrc
