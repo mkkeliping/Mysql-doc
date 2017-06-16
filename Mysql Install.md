@@ -27,7 +27,7 @@ MySQL是一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，
       deb http://extras.ubuntu.com/ubuntu/ xenial main*        
     2. sudo vim /etc/apt/sources.list     
         解释 ：打开源列表        
-    3. ~$ sudo apt-get update    
+    3. sudo apt-get update    
         解释：更新源      
     4. sudo apt-get install tasksel        
         解释：安装       
