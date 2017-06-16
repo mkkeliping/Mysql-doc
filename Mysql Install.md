@@ -24,9 +24,8 @@ MySQL是一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，
         deb-src http://mirrors.aliyun.com/ubuntu/ xenial-proposed main restricted universe multiverse       
        `# Canonical 合作伙伴和附加`   
       deb http://archive.canonical.com/ubuntu/ xenial partner
-      deb http://extras.ubuntu.com/ubuntu/ xenial main*
-
-     2. sudo vim /etc/apt/sources.list      
+      deb http://extras.ubuntu.com/ubuntu/ xenial main*     
+      2. sudo vim /etc/apt/sources.list      
      解释 ：
 linux@ubuntu:~$ sudo vim /etc/apt/sources.list
 linux@ubuntu:~$ sudo apt-get update
