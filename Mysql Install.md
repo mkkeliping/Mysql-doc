@@ -32,19 +32,9 @@ MySQL是一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，
       4. sudo apt-get install tasksel        
         解释：安装       
       5. mysql -u root -p         
-       解释：连接本地数据库注意输入上述命令后回车在输入密码            
+       解释：连接本地数据库注意输入上述命令后回车出现Enter password:然后在输入密码            
        连接远程主机MySQL需要输入mysql -h110.110.110.110 -u root -p 123;其中前面是主机，本主机可以省去。
-linux@ubuntu:~$ sudo vim /etc/apt/sources.list
-linux@ubuntu:~$ sudo apt-get update
-
- sudo apt-get install tasksel
- Reading package lists... Done
-Building dependency tree  
-
-
-mysql -u root -p 
-Enter password: 
-
+>> MySQL 其他设定
 
 
 
