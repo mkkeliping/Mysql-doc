@@ -48,156 +48,40 @@ MySQL是一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，
 
 
 
- databases
-    -> ^C  bases
-
-^C
-mysql> show databases
-    -> ;
-+--------------------+
-| Database           |
-+--------------------+
-| information_schema |
-| mysql              |
-| performance_schema |
-| sys                |
-+--------------------+
-4 rows in set (0.09 sec)
-
-mysql> create database STU
-    -> create database STU;
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'create database STU' at line 2
-mysql> create database STU create database STU;
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'create database STU' at line 1
-mysql> create database STU;
-Query OK, 1 row affected (0.16 sec)
-
-mysql> show databases;
-+--------------------+
-| Database           |
-+--------------------+
-| information_schema |
-| STU                |
-| mysql              |
-| performance_schema |
-| sys                |
-+--------------------+
-5 rows in set (0.05 sec)
-
-mysql> drop database STU;
-Query OK, 0 rows affected (0.32 sec)
-
-mysql> show databases;
-+--------------------+
-| Database           |
-+--------------------+
-| information_schema |
-| mysql              |
-| performance_schema |
-| sys                |
-+--------------------+
-4 rows in set (0.00 sec)
-
-mysql> 
-mysql> create database STU;
-Query OK, 1 row affected (0.00 sec)
-
-mysql> show databases;
-+--------------------+
-| Database           |
-+--------------------+
-| information_schema |
-| STU                |
-| mysql              |
-| performance_schema |
-| sys                |
-+--------------------+
-5 rows in set (0.00 sec)
-
-mysql> use STU
-Database changed
-mysql> select database();
-+------------+
-| database() |
-+------------+
-| STU        |
-+------------+
-1 row in set (0.00 sec)
-
-mysql> select now();
-+---------------------+
-| now()               |
-+---------------------+
-| 2017-06-15 02:08:07 |
-+---------------------+
-1 row in set (0.01 sec)
-
-mysql> create table information;
-ERROR 1113 (42000): A table must have at least 1 column
-mysql> create table information
-    -> 
-    -> 
-    -> (ID int(4) not null primary key auto_increment,
-    -> Name VARCHAR(20) not nul;
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'nul' at line 5
-mysql> create table information   (ID int(4) not null primary key auto_increment, Name VARCHAR(20) not nul,
-    -> 
-    -> Sex VARCHAR(4),
-    -> Sex VARCHAR(4) not null,
-    -> Sdept VARCHAR(40))
-    -> ;
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'nul,
-
-Sex VARCHAR(4),
-Sex VARCHAR(4) not null,
-Sdept VARCHAR(40))' at line 1
-mysql> desc information;
-ERROR 1146 (42S02): Table 'STU.information' doesn't exist
-mysql> create table information   (ID int(4) not null primary key auto_increment, Name VARCHAR(20) not null,  Sex VARCHAR(4), Sex VARCHAR(4) not null, Sdept VARCHAR(40));
-ERROR 1060 (42S21): Duplicate column name 'Sex'
-mysql> create table information   (ID int(4) not null primary key auto_increment, Name VARCHAR(20) not null,  Sex VARCHAR(4), Sex VARCHAR(4) not null, Sdept int(4));
-ERROR 1060 (42S21): Duplicate column name 'Sex'
-mysql> create table information   (ID int(4) not null primary key auto_increment, Name VARCHAR(20) not null,  Sex VARCHAR(4), Sex VARCHAR(4) not null, Sdept int(4),);
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
-mysql> create table information   (ID int(4) not null primary key auto_increment, Name VARCHAR(20) not null,  Sex VARCHAR(4), Sex VARCHAR(4) not null, Sdept int(4),);
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
-mysql> create table information   (ID int(4) not null primary key auto_increment, Name VARCHAR(20) not null,  Sex VARCHAR(4), Sex VARCHAR(4) not null, Sdept int(4),FOREIGN KEY (Sdept)REFERENCES School(Sdept));
-ERROR 1060 (42S21): Duplicate column name 'Sex'
-mysql> (ID int(4) not null primary key auto_increment, Name VARCHAR(20) not null,  Sex VARCHAR(4), Sex VARCHAR(4) not null, Sdept int(4),FOREIGN KEY (Sdept)REFERENCES School(Sdept));
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ID int(4) not null primary key auto_increment, Name VARCHAR(20) not null,  Sex V' at line 1
-mysql> create table information   (ID int(4) not null primary key auto_increment, Name VARCHAR(20) not null, Sex VARCHAR(4) not null, Sdept int(4),FOREIGN KEY (Sdept)REFERENCES School(Sdept))
-    -> ;
-ERROR 1215 (HY000): Cannot add foreign key constraint
-mysql> create table School (Sdept int(8) not null primary key, Sname VARCHAR(40) not null);
-Query OK, 0 rows affected (0.05 sec)
-
-mysql> create table information   (ID int(4) not null primary key auto_increment, Name VARCHAR(20) not null, Sex VARCHAR(4) not null, Sdept int(4),FOREIGN KEY (Sdept)REFERENCES School(Sdept))
-    -> ;
-Query OK, 0 rows affected (0.08 sec)
-
-mysql> desc information
-    -> ;
-+-------+-------------+------+-----+---------+----------------+
-| Field | Type        | Null | Key | Default | Extra          |
-+-------+-------------+------+-----+---------+----------------+
-| ID    | int(4)      | NO   | PRI | NULL    | auto_increment |
-| Name  | varchar(20) | NO   |     | NULL    |                |
-| Sex   | varchar(4)  | NO   |     | NULL    |                |
-| Sdept | int(4)      | YES  | MUL | NULL    |                |
-+-------+-------------+------+-----+---------+----------------+
-4 rows in set (0.07 sec)
-
-mysql> desc School
-    -> ;
-+-------+-------------+------+-----+---------+-------+
-| Field | Type        | Null | Key | Default | Extra |
-+-------+-------------+------+-----+---------+-------+
-| Sdept | int(8)      | NO   | PRI | NULL    |       |
-| Sname | varchar(40) | NO   |     | NULL    |       |
-+-------+-------------+------+-----+---------+-------+
-2 rows in set (0.00 sec)
-
-mysql> 
+/* 学校表，包括全国各大高校*/
+create table School(
+SchoolCode smallint primary key,/*学校编号*/
+SchoolName varchar(30) not null,#学校名称，汉字不能超过15个
+SchoolBorn date,#学校创办日期
+SchoolAdr varchar(40),#学校地址
+SchoolHead  varchar(10)#校长名
+);
 
 
+/* 学院表，包括一个学校中的所有学院*/
+create table College(
+collegeCode smallint primary key,/*学院编号*/
+collegeName varchar(30) not null,#学院名称，汉字不能超过15个
+collegeHead  varchar(10),#院长名
+SchoolCode smallint,
+FOREIGN KEY (SchoolCode) REFERENCES School(SchoolCode)
+);
 
+/* 专业表，包括每个院的各个专业*/
+create table Major(
+MajorCode smallint primary key,/*专业编号*/
+MajorName varchar(20) not null,#专业名称，汉字不能超过15个
+MajorHead  varchar(10),#专业指导老师
+collCode smallint,#学院编号
+FOREIGN KEY (collCode) REFERENCES College(collegeCode)#外键，被参照表是College，被参照列是collegeCode
+);
+
+/* 学生信息表，包括每个专业的各个学生信息*/
+create table Student(
+stuID smallint primary key,/*学号*/
+stuName varchar(10) not null,#学生名称
+stuSex  char(2),#学生性别
+stuBorn date,#学生出生日期年-月-日
+stuPolSta varchar(8),#政治面貌
+stuAdr varchar(30)#籍贯
+);
