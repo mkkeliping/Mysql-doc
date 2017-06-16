@@ -37,7 +37,9 @@ MySQL是一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，
        
  > MySQL 其他设置命令       
  >> 1. 退出MYSQL命令： exit （回车)           
-    2. 修改密码：mysqladmin -u用户名 -p旧密码 password 新密码
+    2. 修改密码：mysqladmin -u用户名 -p旧密码 password 新密码          
+    3. workbench 安装         
+        sudo apt-get install mysql-workbench
 
 
 
