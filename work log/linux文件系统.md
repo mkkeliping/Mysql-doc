@@ -8,6 +8,32 @@
 * 注：在linux中0代表输入1代表标准输出2代表错误，标准端口被占用
 ## 文件查看
 * cat cpuinfo查看cpu信息
+图片
 * cat meminfo 查看内存
+图片
 * cat kmsy 所有kernel 启动时所有信息
+图片
+### 基本的根目录文件
+* etc 软件安装
+* lib 库
+* media 多媒体光驱
+* opt 第三方编译器
+* root根用户目录
+* sys系统用的
+* lost+found 文件系统
+### proc 介绍
+* fb显卡驱动
+* zrp中断
+* softirqs软中断
+
 ## 基本文件操作
+### 基本文件操作
+* 文件的创建（toush ***）
+*  删除
+  rm  /m1/f1       删除/m1目录下的f1
+  rm  –f   /m1/*   删除m1目录下的所有文件 
+  rm  -rf  /m1      强制删除一个目录 
+* 复制http://www.jb51.net/LINUXjishu/43202.html
+重命名、移动
+* 列出文件列表
+* 查看文件内容
