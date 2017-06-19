@@ -41,7 +41,7 @@ MySQL是一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，
     3. workbench 安装         
         sudo apt-get install mysql-workbench
 
-[hhh](work log/)
+[hhh](work log/ Vim文本编辑器.md)
 
 
 
