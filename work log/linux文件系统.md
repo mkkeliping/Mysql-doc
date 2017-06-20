@@ -37,3 +37,15 @@
 重命名、移动
 * 列出文件列表
 * 查看文件内容
+
+create table Student(
+stuID smallint primary key,/*学号*/
+stuName varchar(10) not null,#学生名称
+stuSex  char(2) check(stuSex in('男','女')),#学生性别
+stuBorn date,#学生出生日期年-月-日
+stuPolSta varchar(8),#政治面貌
+stuAdr varchar(30),#籍贯
+stutel char(11),#学生电话
+stumajor smallint,#学生所属系号
+foreign key (stumajor) references Major(MajorCode)#外键，被参照表是Major，被参照列是MajorCode
+);
