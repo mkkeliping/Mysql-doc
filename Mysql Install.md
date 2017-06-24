@@ -51,10 +51,10 @@ drop database <数据库名>
 * 使用数据库
 use <数据库名>
 * 输出相关信息
-        1. 显示MYSQL的版本select version();
-        2. 显示当前时间select now();
-        3. 显示年月日SELECT DAYOFMONTH(CURRENT_DATE); SELECT MONTH(CURRENT_DATE); SELECT YEAR(CURRENT_DATE);
-        4. 显示字符串SELECT "welecome to my blog!";
+   1. 显示MYSQL的版本select version();
+   2. 显示当前时间select now();
+   3. 显示年月日SELECT DAYOFMONTH(CURRENT_DATE); SELECT MONTH(CURRENT_DATE); SELECT YEAR(CURRENT_DATE);
+   4. 显示字符串SELECT "welecome to my blog!";
 * 创建数据表
 create table <表名> ( <字段名1> <类型1> [,..<字段名n> <类型n>]);
 * 查看表结构
