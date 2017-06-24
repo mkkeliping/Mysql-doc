@@ -95,64 +95,30 @@
    cd ./:进入当前目录下的某个文件             
    cd :进入主目录(home)
    cd .. :返回父文件                
-* 显示文件            
+* 显示文件                       
+
    命令：ls                      
    ls :显示当前文件夹的文件
    ls -a :显示所有文件，包括隐藏文件
    
-* 检查文件类型         
-命令：file +文件名              
-* 显示文件内容               
-命令：cat +文件名                           
-* 解压文件                            
-命令：tar  -xvf  all.tar                         
-* 显示不同                  
+* 检查文件类型                     
+
+命令：file +文件名                
+
+* 显示文件内容                     
+
+命令：cat +文件名                          
+
+* 解压文件                          
+
+命令：tar  -xvf  all.tar                  
+
+* 显示不同                  
+
 命令：diff              
+
 格式：diff 　文件１　　文件2                 
-* 命令自动补齐                    
+
+* 命令自动补齐                  
+
 命令：按table键自动补齐
-
-
-
-mysql> show variables like 'character%'
-    -> ;
-+--------------------------+----------------------------+
-| Variable_name            | Value                      |
-+--------------------------+----------------------------+
-| character_set_client     | utf8                       |
-| character_set_connection | utf8                       |
-| character_set_database   | latin1                     |
-| character_set_filesystem | binary                     |
-| character_set_results    | utf8                       |
-| character_set_server     | latin1                     |
-| character_set_system     | utf8                       |
-| character_sets_dir       | /usr/share/mysql/charsets/ |
-+--------------------------+----------------------------+
-8 rows in set (0.02 sec)
-
-mysql> character_set_database=utf8;
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'character_set_database=utf8' at line 1
-mysql> character_set_server=utf8;
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'character_set_server=utf8' at line 1
-mysql> set character_set_server=utf8;
-Query OK, 0 rows affected (0.00 sec)
-
-mysql> set character_set_database=utf8;
-Query OK, 0 rows affected, 1 warning (0.00 sec)
-
-mysql> show variables like 'character%';
-+--------------------------+----------------------------+
-| Variable_name            | Value                      |
-+--------------------------+----------------------------+
-| character_set_client     | utf8                       |
-| character_set_connection | utf8                       |
-| character_set_database   | utf8                       |
-| character_set_filesystem | binary                     |
-| character_set_results    | utf8                       |
-| character_set_server     | utf8                       |
-| character_set_system     | utf8                       |
-| character_sets_dir       | /usr/share/mysql/charsets/ |
-+--------------------------+----------------------------+
-8 rows in set (0.01 sec)
-
-mysql> 
