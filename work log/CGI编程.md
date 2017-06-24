@@ -25,33 +25,33 @@ CGI(Common Gateway Interface) 是WWW技术中最重要的技术之一，有着�
 cp `*`.cgi /usr/lib/cgi-bin/sx
 运行把生成的所有.cgi文夹复制到cgi /usr/lib/cgi-bin/sx目录下
 在此处也可以移动其他文件
-5.2 MySQL的C接口介绍
-	安装mysql的C语言库
+## MySQL的C接口介绍
+### 安装mysql的C语言库
 sudo apt-get update
 sudo apt-get install libmysqlclient-dev
-	获取表单数据
+### 获取表单数据
 cgiFormResultType   cgiFormString(char *name, char *result, int max);
 参数：  name, 指定要获取的表单项的名字
        result,将获得的数据存储到result中
        max， 指定最多读取的字符个数
 比如： cgiFormString("name", result,  16);可以获得最多16个字符并且保存于result中
-	打印字符
+### 打印字符
 int fprintf(FILE *stream, const char *format, ...);
 功能： 将格式化的语句输出到指定的流
 fprintf(stdin, "helloworld\n")  等价于 printf("helloworld\n)补充函数atoi
-	转换char型为数字型
+### 转换char型为数字型
 int atoi(const char *nptr);
 功能：将一个字符串转换成对应的数字
-	初始化函数
+### 初始化函数
 MYSQL *mysql_init(MYSQL *mysql)
 初始化函数，参数为NULL即可，接收返回值。
 失败，NULL
-	连接mysql服务器
+###　连接mysql服务器
 MYSQL *mysql_real_connect(MYSQL *mysql, const char *host, const char *user, const char *passwd, const char *db, unsigned int port, const char *unix_socket, unsigned long client_flag)
 功能：连接mysql服务器
-      失败，NULL
-	关闭服务器连接
-oid mysql_close(MYSQL *mysql)     功能：关闭服务器连接
-	返回提示
+      失败，NULL
+关闭服务器连接
+oid mysql_close(MYSQL *mysql)     功能：关闭服务器连接
+＃＃＃返回提示
 const char *mysql_error(MYSQL *mysql)
 功能：返回出错提示
