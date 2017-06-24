@@ -103,22 +103,22 @@
    
 * 检查文件类型                     
 
-命令：file +文件名                
+   命令：file +文件名                
 
 * 显示文件内容                     
 
-命令：cat +文件名                          
+   命令：cat +文件名                          
 
 * 解压文件                          
 
-命令：tar  -xvf  all.tar                  
+   命令：tar  -xvf  all.tar                  
 
 * 显示不同                  
 
-命令：diff              
+    命令：diff              
 
-格式：diff 　文件１　　文件2                 
+   格式：diff 　文件１　　文件2                 
 
 * 命令自动补齐                  
 
-命令：按table键自动补齐
+   命令：按table键自动补齐
