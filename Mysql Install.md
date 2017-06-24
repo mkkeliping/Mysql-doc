@@ -50,34 +50,42 @@ MySQL是一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，
      show databases
 * 删除数据库               
 
-drop database <数据库名>
-* 使用数据库
-use <数据库名>
-* 输出相关信息
+    drop database <数据库名>
+* 使用数据库           
+     use <数据库名>
+* 输出相关信息             
+   
   1. 显示MYSQL的版本select version();
   2. 显示当前时间select now();
   3. 显示年月日SELECT DAYOFMONTH(CURRENT_DATE); SELECT MONTH(CURRENT_DATE); SELECT YEAR(CURRENT_DATE);
   4. 显示字符串SELECT "welecome to my blog!";
-* 创建数据表
-create table <表名> ( <字段名1> <类型1> [,..<字段名n> <类型n>]);
-* 查看表结构
-desc 表名
-* 删除表
-drop table <表名>
-* 表插入数据
-insert into <表名> [( <字段名1>[,..<字段名n > ])] values ( 值1 )[, ( 值n )]
-* 查询表中的数据
-select <字段1，字段2，...> from < 表名 > where < 表达式 >
-* 修改表中数据
-update 表名 set 字段=新值,... where 条件
-* 增加字段
-alter table 表名 add字段 类型
-* 添加索引
-alter table 表名 add index 索引名
-* 查看索引
-show index from 表名
-* 删除索引
-删除某个索引 mysql> alter table 表名 drop index 索引名;
-* 修改字段
-mysql> ALTER TABLE table_name ADD field_name field_type;
+* 创建数据表               
+   create table <表名> ( <字段名1> <类型1> [,..<字段名n> <类型n>]);
+* 查看表结构                 
+   desc 表名
+* 删除表             
+
+    drop table <表名>
+* 表插入数据             
+    insert into                
+    <表名> [( <字段名1>[,..<字段名n > ])]                 
+    values ( 值1 )[, ( 值n )]
+* 查询表中的数据                         
+    select <字段1，字段2，...>                  
+    from < 表名 >                  
+    where < 表达式 >
+* 修改表中数据                         
+   update 表名              
+   set 字段=新值,...              
+   where 条件
+* 增加字段                   
+   alter table 表名 add字段 类型
+* 添加索引                
+   alter table 表名 add index 索引名
+* 查看索引          
+  show index from 表名
+* 删除索引                    
+  删除某个索引 mysql> alter table 表名 drop index 索引名;
+* 修改字段                   
+   mysql> ALTER TABLE table_name ADD field_name field_type;
 
