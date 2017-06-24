@@ -42,11 +42,14 @@ MySQL是一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，
         sudo apt-get install mysql-workbench
 ## MySQL命令操作
 
-* 创建数据库
+* 创建数据库               
+
 create database <数据库名>
-* 显示数据库
+* 显示数据库                 
+
 show databases
-* 删除数据库
+* 删除数据库               
+
 drop database <数据库名>
 * 使用数据库
 use <数据库名>
