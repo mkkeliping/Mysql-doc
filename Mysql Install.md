@@ -44,10 +44,10 @@ MySQL是一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，
 
 * 创建数据库               
 
-create database <数据库名>
+        create database <数据库名>
 * 显示数据库                 
 
-show databases
+        show databases
 * 删除数据库               
 
 drop database <数据库名>
