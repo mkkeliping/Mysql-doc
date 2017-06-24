@@ -11,17 +11,17 @@ CGI(Common Gateway Interface) 是WWW技术中最重要的技术之一，有着�
 变成一个完整的新的交互式媒体
 >在apache中开启cgi支持.
 >>命令：sudo ln -s /etc/apache2/mods-available/cgi.load /etc/apache2/mods-enabled/cgi.load
->需要重启 apache 服务器
->>命令：service apache2 restart
-需要运行的cgi文件的存放路径为:
+* 需要重启 apache 服务器
+命令：service apache2 restart
+* 需要运行的cgi文件的存放路径为:
 /usr/lib/cgi-bin已存在
->改完目录的权限, 方便对目录下的文件写.
->>命令：sudo mkdir /usr/lib/cgi-bin/sx
-在目录/usr/lib/cgi-bin/下创建目录SX,以后的cgi文档会放在其中
->命令：sudo chmod 777 /usr/lib/cgi-bin/sx
->>改变文件夹的权限，将其改为可读可写
->命令：Makefile.
->>install:
+* 改完目录的权限, 方便对目录下的文件写.
+命令：sudo mkdir /usr/lib/cgi-bin/sx
+* 在目录/usr/lib/cgi-bin/下创建目录SX,以后的cgi文档会放在其中
+命令：sudo chmod 777 /usr/lib/cgi-bin/sx
+*  改变文件夹的权限，将其改为可读可写
+命令：Makefile.
+install:
 cp `*`.cgi /usr/lib/cgi-bin/sx
 运行把生成的所有.cgi文夹复制到cgi /usr/lib/cgi-bin/sx目录下
 在此处也可以移动其他文件
