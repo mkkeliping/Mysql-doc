@@ -55,3 +55,4 @@ oid mysql_close(MYSQL *mysql)     功能：关闭服务器连接
 ＃＃＃返回提示
 const char *mysql_error(MYSQL *mysql)
 功能：返回出错提示
+* [返回](../README.md)  
