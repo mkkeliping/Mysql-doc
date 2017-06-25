@@ -1,6 +1,6 @@
 ## 技术文档
-* [Linux安装与文件介绍](work log/linux安装与文件介绍.md)
 
+* [Linux安装与文件介绍](work log/linux安装与文件介绍.md)
 ## 课设文档
 
 
