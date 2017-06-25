@@ -3,7 +3,7 @@
 * [Vim文本编辑](workLog/Vim文本编辑器.md)
 * [github使用](workLog/github使用.md)
 * [配置环境](workLog/配置环境.md)
-* [MySQLInstall](workLog/MySQL Install.md)
+* [MySQLInstall](workLog/MySQL_Install.md)
 * [Markdown](workLog/Markdown.md)
 * [CGI编程](workLog/CGI编程.md)
 * [乱码问题](workLog/乱码问题.md)
