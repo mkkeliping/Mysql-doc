@@ -9,6 +9,8 @@
 * [乱码问题](workLog/乱码问题.md)
 * [远程推送](workLog/远程推送问题.md)
 ## 课设文档
+* [需求分析文档](CourseDesign/数据库设计需求分析阶段.md)
+* [基本表](CourseDesign/基本表设计.md)
 
 
 ## 生活日志
